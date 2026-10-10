@@ -1,0 +1,23 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "whatsapp-payment-ledger",
+  "main": "src/index.js",
+  "compatibility_date": "2026-01-01",
+
+  "vars": {
+    "GROQ_VISION_MODEL": "<groq-vision-model-id>",
+    "GROQ_CHAT_MODEL": "<groq-chat-model-id>",
+    "GROQ_WHISPER_MODEL": "whisper-large-v3",
+
+    // Only these numbers can create entries (comma-separated, with country code)
+    "AUTHORISED_NUMBERS": "92300XXXXXXX",
+
+    // One object per ledger. accountTails = last 4 digits of receiving accounts / wallets.
+    "LEDGERS": "[{\"key\":\"biz\",\"label\":\"Business Account\",\"tableId\":\"<tbl...>\",\"accountTails\":[\"1234\"],\"bank\":\"Meezan\",\"holderNames\":[\"Example Traders\"],\"aliases\":[\"biz\",\"shop\"]},{\"key\":\"wallet\",\"label\":\"Mobile Wallet\",\"tableId\":\"<tbl...>\",\"accountTails\":[\"5678\"],\"bank\":\"JazzCash\",\"holderNames\":[\"Owner Name\"],\"aliases\":[\"wallet\",\"jazz\"]}]",
+
+    "LEDGER_FIELDS": "{\"amount\":\"Amount\",\"date\":\"Date\",\"reference\":\"Reference\",\"sender\":\"Received From\",\"note\":\"Note\",\"source\":\"Source\"}"
+  }
+
+  // Secrets: WA_TOKEN, WA_PHONE_NUMBER_ID, WA_VERIFY_TOKEN, GROQ_API_KEY,
+  //          AIRTABLE_TOKEN, AIRTABLE_BASE_ID
+}

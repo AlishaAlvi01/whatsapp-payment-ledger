@@ -1,0 +1,7 @@
+# Local dev secrets for 'wrangler dev' — never commit
+WA_TOKEN=
+WA_PHONE_NUMBER_ID=
+WA_VERIFY_TOKEN=
+GROQ_API_KEY=
+AIRTABLE_TOKEN=
+AIRTABLE_BASE_ID=
